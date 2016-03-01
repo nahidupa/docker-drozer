@@ -13,6 +13,11 @@ RUN touch /etc/bash_completion
 VOLUME /work
 COPY ./deb /work
 
+cd /work
+# Install the console
+RUN dpkg -i drozer_2.3.4.deb
+RUN rm *.deb
+
 # Clean up 
 RUN apt-get autoremove
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
