@@ -15,7 +15,7 @@ COPY ./deb /work
 
 WORKDIR /work
 # Install the console
-RUN dpkg -i drozer_2.3.4.deb
+RUN dpkg -i drozer_2.4.4.deb
 RUN rm *.deb
 
 # Clean up 
